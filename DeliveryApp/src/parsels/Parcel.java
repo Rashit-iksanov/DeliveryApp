@@ -14,16 +14,16 @@ public abstract class Parcel {
     }
 
     public void packageItem() {
-        System.out.println("Посылка " + description + " упакована!");
+        System.out.println("Посылка <<" + description + ">> упакована!");
     }
 
     public void deliver() {
-        System.out.println("Посылка " + description + " доставлена по адресу " + deliveryAddress);
+        System.out.println("Посылка <<" + description + ">> доставлена по адресу: <<" + deliveryAddress + ">>");
     }
 
     public final double calculateDeliveryCost() {
         System.out.println("Вычислить стоимость доставки: ");
-        if(weight <=0) {
+        if (weight <= 0) {
             System.out.println("Вес должен быть больше 0");
         }
         return weight * getBaseCost();
